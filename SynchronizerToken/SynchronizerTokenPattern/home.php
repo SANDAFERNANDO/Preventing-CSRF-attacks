@@ -36,8 +36,7 @@
                     
 					
 					<div class="wrap-input100 validate-input m-b-16" >
-						<input class="input100" type="text" name="post" value="<?php echo $_POST['updatepost']?>">
-
+						
 						
 						
 						
@@ -50,7 +49,7 @@
 
 						if(isset($_POST['updatepost'])){
 							if(token::checkToken($val,$_COOKIE['ssd'])){
-								 //echo $_POST['updatepost']; 
+								 echo $_POST['updatepost']; 
 							}
 							else{
 							echo "Error".$_COOKIE['ssd'];
