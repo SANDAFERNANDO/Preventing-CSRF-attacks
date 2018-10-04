@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -36,7 +37,9 @@
                     
 					
 					<div class="wrap-input100 validate-input m-b-16" >
-						<input class="input100" type="text" name="post" value="<?php echo $_POST['updatepost']?>">
+						
+						
+						
 <?php
 
 require_once 'token.php';
@@ -47,7 +50,7 @@ $val = $_POST["token"];
 
 if(isset($_POST['updatepost'])){
 	if(token::checkToken($val,$_COOKIE['csrfCookie'])){
-		//echo "Hey ".$_POST['updatepost']." ";
+		echo $_POST['updatepost']." ";
 		
 	    
 	}
@@ -56,11 +59,18 @@ if(isset($_POST['updatepost'])){
 	}
 }
 ?>
-
-		
+	
 					<span class="focus-input100"></span>
 					</div>
-					</body>			
+
+					</body>
+
+
+
+
+
+
+					
 					
 				</form>
 			</div>
