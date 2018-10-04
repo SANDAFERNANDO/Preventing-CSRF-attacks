@@ -42,21 +42,24 @@
 						
 						
 						<?php
-require_once 'token.php';
+						require_once 'token.php';
 
 
-$val = $_POST["token"];
+						$val = $_POST["token"];
 
 
-if(isset($_POST['updatepost'])){
-	if(token::checkToken($val,$_COOKIE['sse1'])){
-		/* echo $_POST['updatepost']; */
-	}
-	else{
-	echo "Error".$_COOKIE['sse1'];
-	}
-}
-?>
+						if(isset($_POST['updatepost'])){
+							if(token::checkToken($val,$_COOKIE['ssd'])){
+								 //echo $_POST['updatepost']; 
+							}
+							else{
+							echo "Error".$_COOKIE['ssd'];
+							}
+						}
+						?>
+						
+						
+						
 					<span class="focus-input100"></span>
 					</div>
 
